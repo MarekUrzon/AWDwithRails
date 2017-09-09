@@ -40,4 +40,11 @@ class OrdersTest < ApplicationSystemTestCase
 		end
 		assert_selector '#cart', text: ''
 	end
+
+	test "Add to Cart should invoke Highlighting Changes" do
+		visit store_index_url
+		first('.entry').click_on 'Add to Cart'
+		assert_selector ".line-item-highlight"
+	end
+
 end
