@@ -20,7 +20,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
       post orders_url, params: { order: {  pay_type: @order.pay_type, address: @order.address, email: @order.email, name: @order.name } }
     end
 
-    assert_redirected_to store_index_url
+    assert_redirected_to store_index_url(locale: 'en')
   end
 
   test "should show order" do

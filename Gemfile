@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.11'
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'foreman'
+gem 'i18n-js'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

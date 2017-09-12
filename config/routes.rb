@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 	get 'admin' => 'admin#index'
-
 	controller :sessions do
-		get 'login' => :new
+		get  'login' => :new
 		post 'login' => :create
 		delete 'logout' => :destroy
 	end
@@ -14,9 +13,8 @@ Rails.application.routes.draw do
 
 	scope '(:locale)' do
 		resources :orders
-		resources :carts
 		resources :line_items
+		resources :carts
 		root 'store#index', as: 'store_index', via: :all
 	end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
